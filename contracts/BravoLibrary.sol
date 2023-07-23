@@ -119,7 +119,7 @@ library BravoLibrary {
         uint256 tokenId,
         string memory color1,
         string memory comp2Color1
-    ) public pure returns (bytes memory) {
+    ) internal pure returns (bytes memory) {
         if (tokenId == 0) {
             return "";
         } else {
@@ -143,7 +143,7 @@ library BravoLibrary {
 
     function renderHelper3(
         Stack2deep memory stack2deep
-    ) public pure returns (bytes memory) {
+    ) internal pure returns (bytes memory) {
         string memory tokenId = stack2deep.tokenId.toString();
 
         if (stack2deep.tokenId == 0) {

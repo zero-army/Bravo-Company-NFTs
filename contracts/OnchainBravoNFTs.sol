@@ -45,7 +45,6 @@ contract OnchainBravoNFTs is ERC1155, ERC1155Burnable, Ownable, ERC1155Supply {
 
     string public constant symbol = "BRAV0";
     string public constant name = "Bravo Company NFTs";
-    string public constant test = "test";
     //decimals = 10 ** 18 for $AIM0 & Mission Coins (fungible) tokens
     uint256 public constant decimals = 10 ** 18;
 

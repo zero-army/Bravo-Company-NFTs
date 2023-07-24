@@ -23,7 +23,8 @@
         }
       ],
       "stateMutability": "pure",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -52,7 +53,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -113,7 +115,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -157,7 +160,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"name\":\"calculateUnits\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"returnBalance\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"unitName\",\"type\":\"string\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_modulus\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_seed\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_salt\",\"type\":\"uint256\"}],\"name\":\"randomNum\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"rank\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"bravoBoost\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"codeName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"returnBalance\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"unitName\",\"type\":\"string\"}],\"name\":\"renderMetadata\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"color1\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"comp2Color1\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"rank\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"bravoBoost\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"codeName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"returnBalance\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"unitName\",\"type\":\"string\"}],\"internalType\":\"struct BravoLibrary.Stack2deep\",\"name\":\"stack2deep\",\"type\":\"tuple\"}],\"name\":\"renderSVG\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/BravoLibrary.sol\":\"BravoLibrary\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":5000},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0x3088eb2868e8d13d89d16670b5f8612c4ab9ff8956272837d8e90106c59c14a0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b81d9ff6559ea5c47fc573e17ece6d9ba5d6839e213e6ebc3b4c5c8fe4199d7f\",\"dweb:/ipfs/QmPCW1bFisUzJkyjroY3yipwfism9RRCigCcK1hbXtVM8n\"]},\"@openzeppelin/contracts/utils/math/Math.sol\":{\"keccak256\":\"0xe4455ac1eb7fc497bb7402579e7b4d64d928b846fce7d2b6fde06d366f21c2b3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cc8841b3cd48ad125e2f46323c8bad3aa0e88e399ec62acb9e57efa7e7c8058c\",\"dweb:/ipfs/QmSqE4mXHA2BXW58deDbXE8MTcsL5JSKNDbm23sVQxRLPS\"]},\"@openzeppelin/contracts/utils/math/SignedMath.sol\":{\"keccak256\":\"0xf92515413956f529d95977adc9b0567d583c6203fc31ab1c23824c35187e3ddc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c50fcc459e49a9858b6d8ad5f911295cb7c9ab57567845a250bf0153f84a95c7\",\"dweb:/ipfs/QmcEW85JRzvDkQggxiBBLVAasXWdkhEysqypj9EaB6H2g6\"]},\"project:/contracts/Base64.sol\":{\"keccak256\":\"0xeb8c090db4bdf1fd90b65a2382eb18c415474c21e7fb21423171c36c651643be\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8020b2c9fcf61b642105497de7528b56ce66c03f2e84fd42f43802752794a503\",\"dweb:/ipfs/QmfQ3UUCJuEJMo5Kiu7FL1FK7pbyoEr9thwWmeCStkXW7y\"]},\"project:/contracts/BravoLibrary.sol\":{\"keccak256\":\"0xdab15e3c71d34f20f69cf17c2b81a335a7ee5d8a6a5d6dc7983628b749ece6fa\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2032dba019cd559631fcb58b346b1f92a26810f201143c70461e8f40e9a1a756\",\"dweb:/ipfs/QmXrpAeHBRgdw16fJGodfsMUHpDpajv6jX4VwUpBdikQyN\"]}},\"version\":1}",
@@ -22721,9 +22725,17 @@
     "name": "solc",
     "version": "0.8.19+commit.7dd6d404.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "1690236362828": {
+      "events": {},
+      "links": {},
+      "address": "0x1Bf3981B82eb6f2940E086BDc05a672365CE9C03",
+      "transactionHash": "0x27cced6e22385a7524a7f1a2f97fc2292f3cf14e847edf426cd8de0448ac705b"
+    }
+  },
   "schemaVersion": "3.4.14",
-  "updatedAt": "2023-07-23T21:53:55.330Z",
+  "updatedAt": "2023-07-24T22:42:26.077Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},

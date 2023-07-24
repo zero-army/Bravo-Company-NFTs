@@ -41,7 +41,8 @@ contract OnchainBravoNFTs is ERC1155, ERC1155Burnable, Ownable, ERC1155Supply {
     //$AIM0 (fungible) token variables
     //NOTE: max supply of $AIM0 (fungible) tokens for this Bravo Company collection is 1 million
     uint256 private constant $AIM0 = 0; //token ID for $AIM0 (fungible) token
-    uint256 public constant maxSupply = 200;
+    uint256 public constant maxSupply = 200; //max supply of Bravo NFTs + 1 for $AIM0 (fungible) tokens = 201
+
     string public constant symbol = "BRAV0";
     string public constant name = "Bravo Company NFTs";
     //decimals = 10 ** 18 for $AIM0 & Mission Coins (fungible) tokens
@@ -68,7 +69,7 @@ contract OnchainBravoNFTs is ERC1155, ERC1155Burnable, Ownable, ERC1155Supply {
 
     constructor() ERC1155("") {
         //mint 1 million rounds of $AIM0 minus 10000 to be minted by recruits later (for gas efficiency)
-        uint256 mintAIM0 = ((10 ** 6) * (10 ** 18)) - (10000 * (10 ** 18));
+        uint256 mintAIM0 = ((10 ** 6) * decimals) - (10000 * decimals);
         _mint(owner(), $AIM0, mintAIM0, "");
 
         //first BravoNFT is the unburned $AIM0 supply
@@ -91,7 +92,7 @@ contract OnchainBravoNFTs is ERC1155, ERC1155Burnable, Ownable, ERC1155Supply {
         require(bytes(codeName).length <= 20, "Code name too long");
         require(bytes(codeName).length > 0, "Code name too short");
         uint256 newID = bravoNFT$.length;
-        require(newID <= 100, "Max supply of 100 Bravo NFTs reached");
+        require(newID <= maxSupply, "Max supply of 200 Bravo NFTs reached");
 
         //Bravo NFT variables - add new Bravo NFT to the collection
         BravoNFT memory newBravoNFT = BravoNFT({
@@ -110,7 +111,7 @@ contract OnchainBravoNFTs is ERC1155, ERC1155Burnable, Ownable, ERC1155Supply {
         _mint(msg.sender, newID, 1, "");
 
         //mint 100 rounds of $AIM0 to the new recruit as enlistment bonus
-        _mint(msg.sender, $AIM0, 100 * (10 ** 18), "");
+        _mint(msg.sender, $AIM0, 100 * decimals, "");
     }
 
     function changeBravoCodeName(
@@ -194,7 +195,7 @@ contract OnchainBravoNFTs is ERC1155, ERC1155Burnable, Ownable, ERC1155Supply {
         bravoNFT$[tokenId].missionCoinsEarned += amount;
         //rank up after burning 100 $AIM0
         bravoNFT$[tokenId].rank = uint256(
-            bravoNFT$[tokenId].missionCoinsEarned / (100 * (10 ** 18))
+            bravoNFT$[tokenId].missionCoinsEarned / (100 * decimals)
         );
     }
 

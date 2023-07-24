@@ -40,8 +40,13 @@ contract OnchainBravoNFTs is ERC1155, ERC1155Burnable, Ownable, ERC1155Supply {
 
     //$AIM0 (fungible) token variables
     //NOTE: max supply of $AIM0 (fungible) tokens for this Bravo Company collection is 1 million
-    //decimals = 10 ** 18 for $AIM0 & Mission Coins (fungible) tokens
     uint256 private constant $AIM0 = 0; //token ID for $AIM0 (fungible) token
+    uint256 public constant maxSupply = 200;
+    string public constant symbol = "BRAV0";
+    string public constant name = "Bravo Company NFTs";
+    //decimals = 10 ** 18 for $AIM0 & Mission Coins (fungible) tokens
+    uint256 public constant decimals = 10 ** 18;
+
 
     //Bravo Company NFT variables & attrtibutes
     //NOTE: max supply of NFTs for this Bravo Company collection is 100

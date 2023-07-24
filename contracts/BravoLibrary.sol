@@ -170,7 +170,7 @@ library BravoLibrary {
 
     function renderHelper4(
         Stack2deep memory stack2deep
-    ) public pure returns (bytes memory) {
+    ) internal pure returns (bytes memory) {
         return
             abi.encodePacked(
                 "</text>",

@@ -228,10 +228,9 @@ library BravoLibrary {
         {
             return "";
         } else {
-
-        return
-            abi.encodePacked(
-                '"attributes":[{"trait_type":"Rank","value":',
+            return
+                abi.encodePacked(
+                    '"attributes":[{"trait_type":"Rank","value":',
                                 rank,
                                 "},",
                                 '{"trait_type":"Mission Coins [ATTO-Z3R0] Earned","value":',
@@ -258,7 +257,7 @@ library BravoLibrary {
         string memory bravoTitle = "BRAVO #";
 
         if (tokenId == 0) {
-            bravoTitle = "[fungible] $AIM";
+            bravoTitle = "[burnable] $AIM";
         }
 
         Stack2deep memory stack2deep = Stack2deep(

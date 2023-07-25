@@ -45,8 +45,7 @@ contract OnchainBravoNFTs is ERC1155, ERC1155Burnable, Ownable, ERC1155Supply {
     //decimals = 10 ** 18 for $AIM0 & Mission Coins (fungible) tokens
     uint256 private constant decimals = 10 ** 18;
     string public constant symbol = "BRAV0";
-    string public constant name = "Bravo Company NFTs";
-
+    string public constant name = "Bravo Company - Zero Army";
 
     //Bravo Company NFT variables & attrtibutes
     //NOTE: max supply of NFTs for this Bravo Company collection is 200

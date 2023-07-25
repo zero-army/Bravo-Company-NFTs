@@ -6,7 +6,6 @@ module.exports = async function (deployer) {
   await deployer.deploy(BravoLibrary);
   await BravoLibrary.detectNetwork();
 
-
   // const bravoLibrary = await BravoLibrary.new();
   console.log("[X] - BravoLibrary deployed to:", BravoLibrary.address);
   

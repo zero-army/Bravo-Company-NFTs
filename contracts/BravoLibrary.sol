@@ -219,16 +219,41 @@ library BravoLibrary {
             );
     }
 
-    function renderMetadata(
+    function returnAttributes(
+        string memory rank,
+        string memory bravoBoost,
+        string memory missionCoinsEarned
+    ) internal pure returns (bytes memory) {
+        return
+            abi.encodePacked(
+                '", "attributes":[{"trait_type":"Rank","value":',
+                                rank,
+                                "},",
+                                '{"display_type": "boost_number","trait_type":"Bravo Boost","value":',
+                                bravoBoost,
+                                "},",
+                                '{"trait_type":"Mission Coins Earned","value":"',
+                                missionCoinsEarned,
+                                "}]"
+            );
+    }
+
+    function returnMetadata(
         uint256 tokenId,
         string memory rank,
         string memory bravoBoost,
         string memory codeName,
         string memory returnBalance,
-        string memory unitName
+        string memory unitName,
+        string memory missionCoinsEarned
     ) public view returns (string memory) {
         uint256 color1 = randomNum(361, 3, 4);
         string memory comp2Color1 = calcComplimentColor(color1).toString();
+        string memory bravoTitle = "BRAVO #";
+
+        if (tokenId == 0) {
+            bravoTitle = "[fungible] $AIM";
+        }
 
         Stack2deep memory stack2deep = Stack2deep(
             tokenId,
@@ -249,20 +274,12 @@ library BravoLibrary {
                         bytes(
                             abi.encodePacked(
                                 '{"name":"',
-                                "BravoC0 #",
+                                bravoTitle,
                                 tokenId.toString(),
-                                '", "description":"',
-                                "Bravo Company NFT collection - 100 Zero Army founders series NFTs.",
-                                '", "external_url":"',
-                                "https://zeroarmy.org/bravo",
-                                '", "attributes":[{"trait_type":"Rank","value":',
-                                rank,
-                                "},",
-                                '{"display_type": "boost_number","trait_type":"Bravo Boost","value":',
-                                bravoBoost,
-                                "}]",
-                                ', "image":"',
-                                "data:image/svg+xml;base64,",
+                                '", "description": "Bravo Company NFT collection - 200 Zero Army founders series NFTs."',
+                                '", "external_url":"https://zeroarmy.org/bravo"',
+                                returnAttributes(rank, bravoBoost, missionCoinsEarned),
+                                ', "image": "data:image/svg+xml;base64,',
                                 renderSVG(stack2deep),
                                 '"}'
                             )

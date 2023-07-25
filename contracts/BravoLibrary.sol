@@ -228,11 +228,11 @@ library BravoLibrary {
                 '"attributes":[{"trait_type":"Rank","value":',
                                 rank,
                                 "},",
+                                '{"trait_type":"Mission Coins Earned","value":',
+                                missionCoinsEarned,
+                                "},",
                                 '{"display_type": "boost_number","trait_type":"Bravo Boost","value":',
                                 bravoBoost,
-                                "},",
-                                '{"trait_type":"Mission Coins Earned","value":"',
-                                missionCoinsEarned,
                                 "}]"
             );
     }
@@ -275,7 +275,7 @@ library BravoLibrary {
                                 '{"name":"',
                                 bravoTitle,
                                 tokenId.toString(),
-                                '", "description": "Bravo Company NFT collection - 200 Zero Army founders series NFTs.',
+                                '", "description": "Bravo Company collection - 200 Zero Army founders series NFTs with soulbound fungible $AIM0.',
                                 '", "external_url":"https://zeroarmy.org/bravo", ',
                                 returnAttributes(rank, bravoBoost, missionCoinsEarned),
                                 ', "image": "data:image/svg+xml;base64,',

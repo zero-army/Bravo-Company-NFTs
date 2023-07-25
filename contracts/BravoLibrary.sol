@@ -219,10 +219,16 @@ library BravoLibrary {
     }
 
     function returnAttributes(
+        uint256 tokenId,
         string memory rank,
         string memory bravoBoost,
         string memory missionCoinsEarned
     ) internal pure returns (bytes memory) {
+        if (tokenId == 0)
+        {
+            return "";
+        } else {
+
         return
             abi.encodePacked(
                 '"attributes":[{"trait_type":"Rank","value":',
@@ -233,8 +239,9 @@ library BravoLibrary {
                                 "},",
                                 '{"display_type": "boost_number","trait_type":"Bravo Boost","value":',
                                 bravoBoost,
-                                "}]"
+                                "}], "
             );
+        }
     }
 
     function returnMetadata(
@@ -277,8 +284,8 @@ library BravoLibrary {
                                 tokenId.toString(),
                                 '", "description": "Bravo Company collection - 200 Zero Army founders series NFTs with soulbound fungible $AIM0.',
                                 '", "external_url":"https://zeroarmy.org/bravo", ',
-                                returnAttributes(rank, bravoBoost, missionCoinsEarned),
-                                ', "image": "data:image/svg+xml;base64,',
+                                returnAttributes(tokenId ,rank, bravoBoost, missionCoinsEarned),
+                                '"image": "data:image/svg+xml;base64,',
                                 renderSVG(stack2deep),
                                 '"}'
                             )

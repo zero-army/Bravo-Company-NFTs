@@ -20,11 +20,10 @@ pragma solidity ^0.8.19;
 /// @author Simon G.Ionashku - find me on github: simon-masterclass
 
 import "@openzeppelin/contracts/utils/Strings.sol";
-import "./Base64.sol";
+import "@openzeppelin/contracts/utils/Base64.sol";
 
 library BravoLibrary {
     using Strings for uint256;
-    using Base64 for bytes;
 
     //struct for cramming all the variables together to avoid stack too deep error
     struct Stack2deep {
@@ -226,7 +225,7 @@ library BravoLibrary {
     ) internal pure returns (bytes memory) {
         return
             abi.encodePacked(
-                '", "attributes":[{"trait_type":"Rank","value":',
+                '"attributes":[{"trait_type":"Rank","value":',
                                 rank,
                                 "},",
                                 '{"display_type": "boost_number","trait_type":"Bravo Boost","value":',
@@ -276,8 +275,8 @@ library BravoLibrary {
                                 '{"name":"',
                                 bravoTitle,
                                 tokenId.toString(),
-                                '", "description": "Bravo Company NFT collection - 200 Zero Army founders series NFTs."',
-                                '", "external_url":"https://zeroarmy.org/bravo"',
+                                '", "description": "Bravo Company NFT collection - 200 Zero Army founders series NFTs.',
+                                '", "external_url":"https://zeroarmy.org/bravo", ',
                                 returnAttributes(rank, bravoBoost, missionCoinsEarned),
                                 ', "image": "data:image/svg+xml;base64,',
                                 renderSVG(stack2deep),

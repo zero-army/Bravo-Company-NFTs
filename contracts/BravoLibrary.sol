@@ -228,7 +228,7 @@ library BravoLibrary {
                 '"attributes":[{"trait_type":"Rank","value":',
                                 rank,
                                 "},",
-                                '{"trait_type":"Mission Coins Earned","value":',
+                                '{"trait_type":"Mission Coins [ATTO-Z3R0] Earned","value":',
                                 missionCoinsEarned,
                                 "},",
                                 '{"display_type": "boost_number","trait_type":"Bravo Boost","value":',

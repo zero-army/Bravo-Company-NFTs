@@ -21,11 +21,12 @@ pragma solidity ^0.8.19;
 // This Bravo Company NFT collection is designed to incentives the first 100 volunteers/employees
 // to enlist and claim their NFTs with $AIM0 rewards built in. Additional $AIM0 payments for work also possible.
 // This ERC-1155 contract is designed to contain both fungible and non-fungible tokens in a novel way
-// Each NFT contains fungible tokens $AIM0 and these fungible $AIM0 tokens are soulbound to the NFT
+// Each NFT contains fungible tokens $AIM0 and these fungible $AIM0 tokens are soulbound to the NFT.
 // Every time a Bravo Company Commander Zero (AKA: C0) burns thier $AIM0 by using the
 // fire$AIM0 function they earn Mission Coins (to be minted seperately using the records in this contract)
 // in addition, every time a Bravo Company C0 burns 100 rounds of $AIM0 (ideally within the MetaSERVE), their NFT ranks up.
 // The attributes that these NFTs contain will be useful with the Zero Army's MetaSERVE
+// The MetaSERVE will be a web3 metaverse game that will allow the Zero Army to manage their NFTs and fire their $AIM0 tokens
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Burnable.sol";
@@ -39,18 +40,17 @@ contract OnchainBravoNFTs is ERC1155, ERC1155Burnable, Ownable, ERC1155Supply {
     using BravoLibrary for uint256;
 
     //$AIM0 (fungible) token variables
-    //NOTE: max supply of $AIM0 (fungible) tokens for this Bravo Company collection is 1 million
+    //NOTE: max supply of $AIM0 (fungible + burnable) tokens for this Bravo Company collection is 2 million
     uint256 private constant $AIM0 = 0; //token ID for $AIM0 (fungible) token
-    uint256 public constant maxSupply = 200; //max supply of Bravo NFTs + 1 for $AIM0 (fungible) tokens = 201
-
+    //decimals = 10 ** 18 for $AIM0 & Mission Coins (fungible) tokens
+    uint256 private constant decimals = 10 ** 18;
     string public constant symbol = "BRAV0";
     string public constant name = "Bravo Company NFTs";
-    //decimals = 10 ** 18 for $AIM0 & Mission Coins (fungible) tokens
-    uint256 public constant decimals = 10 ** 18;
 
 
     //Bravo Company NFT variables & attrtibutes
-    //NOTE: max supply of NFTs for this Bravo Company collection is 100
+    //NOTE: max supply of NFTs for this Bravo Company collection is 200
+    uint256 public constant maxSupply = 200; //max supply of Bravo NFTs + 1 for $AIM0 (fungible) tokens = 201
     struct BravoNFT {
         address bravOwner;
         string codeName;
@@ -68,8 +68,8 @@ contract OnchainBravoNFTs is ERC1155, ERC1155Burnable, Ownable, ERC1155Supply {
     bool public fire$AIM0TF = false;
 
     constructor() ERC1155("") {
-        //mint 1 million rounds of $AIM0 minus 10000 to be minted by recruits later (for gas efficiency)
-        uint256 mintAIM0 = ((10 ** 6) * decimals) - (10000 * decimals);
+        //mint 2 million rounds of $AIM0 minus 10000 to be minted by recruits later (for gas efficiency)
+        uint256 mintAIM0 = ((2*10 ** 6) * decimals) - (10000 * decimals);
         _mint(owner(), $AIM0, mintAIM0, "");
 
         //first BravoNFT is the unburned $AIM0 supply

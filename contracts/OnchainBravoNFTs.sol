@@ -131,7 +131,7 @@ contract OnchainBravoNFTs is ERC1155, ERC1155Burnable, Ownable, ERC1155Supply {
     function uri(uint256 tokenId) public view override returns (string memory) {
         require(
             exists(tokenId),
-            "ERC721Metadata: URI query for nonexistent token"
+            "ERC1155Metadata: URI query for nonexistent token"
         );
 
         //calculate balance

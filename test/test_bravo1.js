@@ -1,5 +1,6 @@
 const { expect } = require("chai");
-const BigNumber = require("bignumber.js")
+const BigNumber = require("bignumber.js");
+const truffleAssert = require("truffle-assertions");
 
 // Import the required libraries
 const BravoLibrary = artifacts.require("BravoLibrary");
@@ -11,11 +12,10 @@ contract("OnchainBravoNFTs", (accounts) => {
 
   before(async () => {
     // Deploy BravoLibrary first
-    // await BravoLibrary.new();
     await BravoLibrary.detectNetwork();
     const bravoLibrary = await BravoLibrary.new();
-    await OnchainBravoNFTs.detectNetwork();
     // Link BravoLibrary to OnchainBravoNFTs contract
+    await OnchainBravoNFTs.detectNetwork();
     await OnchainBravoNFTs.link(bravoLibrary, bravoLibrary.address);
     // Deploy OnchainBravoNFTs contract
     onchainBravoNFTs = await OnchainBravoNFTs.new();

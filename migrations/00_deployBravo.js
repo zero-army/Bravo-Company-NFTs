@@ -12,7 +12,7 @@ module.exports = async function (deployer) {
   
   // Link BravoLibrary to OnchainBravoNFTs contract
   const network = await OnchainBravoNFTs.detectNetwork();
-  console.log("[X] - network:", network);
+  console.log("[X] - Network:", network);
   await deployer.link(BravoLibrary, OnchainBravoNFTs);
   
   // Deploy OnchainBravoNFTs contract

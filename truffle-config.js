@@ -45,6 +45,9 @@
 // const { MNEMONIC, PROJECT_ID } = process.env;
 
 // const HDWalletProvider = require('@truffle/hdwallet-provider');
+const fs = require('fs');
+
+const polygonscanKey = fs.readFileSync(".polygonscan").toString().trim();
 
 module.exports = {
   /**
@@ -126,12 +129,16 @@ module.exports = {
       settings: {          // See the solidity docs for advice about optimization and evmVersion
        optimizer: {
          enabled: true,
-         runs: 5000
+         runs: 200
        },
        evmVersion: "constantinople"
       }
     }
   },
+  plugins: ['truffle-plugin-verify'],
+  api_keys: {
+    polygonscan: polygonscanKey
+  }
 
   // Truffle DB is currently disabled by default; to enable it, change enabled:
   // false to enabled: true. The default storage location can also be

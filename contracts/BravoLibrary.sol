@@ -261,7 +261,7 @@ library BravoLibrary {
                                 '{"display_type": "boost_number","trait_type":"Bravo Boost","value":',
                                 bravoBoost,
                                 "}]",
-                                '", "image":"',
+                                ', "image":"',
                                 "data:image/svg+xml;base64,",
                                 renderSVG(stack2deep),
                                 '"}'

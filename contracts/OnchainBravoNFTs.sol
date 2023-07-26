@@ -152,7 +152,7 @@ contract OnchainBravoNFTs is ERC1155, ERC1155Burnable, Ownable, ERC1155Supply {
                 bravoNFT$[tokenId].codeName,
                 returnBalance,
                 unitName,
-                bravoNFT$[tokenId].missionCoinsEarned.toString()
+                bravoNFT$[tokenId].missionCoinsEarned
             );
     }
 

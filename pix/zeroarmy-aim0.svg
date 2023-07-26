@@ -1,0 +1,52 @@
+<svg width="777" height="777" xmlns="http://www.w3.org/2000/svg">
+    <circle stroke="hsl(77, 69%, 55%)" stroke-dasharray="5,2,2,2,2,2" stroke-width="48" cx="388.5" cy="488" r="134"
+        fill="#000000" />
+
+    <!-- <rect transform="rotate(-45 388.5 42)" stroke-width="22" fill="#000" x="0" y="-346.5" width="777" height="777" /> -->
+
+
+    <circle stroke="hsl(77, 77%, 34%)" stroke-dasharray="5,34,13" stroke-width="24" cx="388.5" cy="488" r="134"
+        fill="#000000" opacity="69%" />
+
+    <!-- <text fill="#ffffff" x="50%" y="117" font-size="122" font-family="futura" text-anchor="middle"
+        dominant-baseline="middle">ZERO
+        ARMY</text> -->
+
+    <text fill="hsl(257, 69%, 55%)" stroke="hsl(77, 69%, 50%)" x="50%" y="134" stroke-width="4" font-size="77" font-family="futura"
+        text-anchor="middle" dominant-baseline="middle">BRAVO COMPANY</text>
+
+     <rect stroke="#000000" stroke-dasharray="2,2,5,7" stroke-width="17" x="34" y="214" width="711" height="100"
+        opacity="88%" fill="#000000" rx="50" ry="50" />
+    <text stroke-width="2" stroke="#ffffff" fill="#000000" x="50%" y="265" font-size="49" font-family="courier"
+        text-anchor="middle" dominant-baseline="middle">$AIM0: UNBURNED SUPPLY</text>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    <!-- <text fill="hsl(257, 69%, 69%)" x="50%" y="288" font-size="42" font-family="futura" text-anchor="middle"
+        dominant-baseline="middle">UNBURNED $AIM0 SUPPLY</text> -->
+
+    <text font-family="futura" font-size="111" text-anchor="middle" dominant-baseline="middle" y="500" x="50%"
+        stroke-width="4" stroke="#ffffff" fill="#000000">O</text>
+
+
+
+
+
+ 
+
+
+
+    <rect stroke="#000000" stroke-dasharray="2,2,5,7" stroke-width="17" x="34" y="662" width="711" height="100"
+        opacity="88%" fill="#000000" rx="50" ry="50" />
+    <text stroke-width="2" stroke="#ffffff" fill="#000000" x="50%" y="713" font-size="49" font-family="courier"
+        text-anchor="middle" dominant-baseline="middle">$AIM0:
+        888888 ROUNDS</text>
+
+
+</svg>

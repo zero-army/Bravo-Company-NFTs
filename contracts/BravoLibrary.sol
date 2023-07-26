@@ -18,6 +18,8 @@ pragma solidity ^0.8.19;
 //.........................................OOOOOO................................................................
 //...............................................................................................................
 /// @author Simon G.Ionashku - find me on github: simon-masterclass
+/// @title Bravo Library
+/// @dev This library is used to render the Bravo Company NFTs and their metadata
 
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/utils/Base64.sol";
@@ -47,25 +49,25 @@ library BravoLibrary {
         //calculate units
         if (uint256(balance / (10 ** 18)) > 0) {
             returnBalance = (balance / (10 ** 18)).toString();
-            unitName = "ROUNDS";
+            unitName = "";
         } else if (uint256(balance / (10 ** 16)) > 0) {
             returnBalance = (balance / (10 ** 16)).toString();
-            unitName = "CENTI-ROUNDS";
+            unitName = "CENTI-";
         } else if (uint256(balance / (10 ** 12)) > 0) {
             returnBalance = (balance / (10 ** 12)).toString();
-            unitName = "MICRO-ROUNDS";
+            unitName = "MICRO-";
         } else if (uint256(balance / (10 ** 9)) > 0) {
             returnBalance = (balance / (10 ** 9)).toString();
-            unitName = "NANO-ROUNDS";
+            unitName = "NANO-";
         } else if (uint256(balance / (10 ** 6)) > 0) {
             returnBalance = (balance / (10 ** 6)).toString();
-            unitName = "PICO-ROUNDS";
+            unitName = "PICO-";
         } else if (uint256(balance / (10 ** 3)) > 0) {
             returnBalance = (balance / (10 ** 3)).toString();
-            unitName = "FEMTO-ROUNDS";
+            unitName = "FEMTO-";
         } else {
             returnBalance = balance.toString();
-            unitName = "ATTO-ROUNDS";
+            unitName = "ATTO-";
         }
 
         return (returnBalance, unitName);
@@ -185,7 +187,7 @@ library BravoLibrary {
                 stack2deep.returnBalance,
                 " ",
                 stack2deep.unitName,
-                "</text>"
+                "ROUNDS</text>"
             );
     }
 
@@ -222,8 +224,9 @@ library BravoLibrary {
         uint256 tokenId,
         string memory rank,
         string memory bravoBoost,
-        string memory missionCoinsEarned
+        uint256 missionCoinsEarned
     ) internal pure returns (bytes memory) {
+        (string memory missionCoinBalance, string memory coinUnits) = calculateUnits(missionCoinsEarned);
         if (tokenId == 0)
         {
             return "";
@@ -233,8 +236,10 @@ library BravoLibrary {
                     '"attributes":[{"trait_type":"Rank","value":',
                                 rank,
                                 "},",
-                                '{"trait_type":"Mission Coins [ATTO-Z3R0] Earned","value":',
-                                missionCoinsEarned,
+                                '{"trait_type":"Mission Coins Earned | Units: ', 
+                                coinUnits,
+                                'Z3R0s","value":',
+                                missionCoinBalance,
                                 "},",
                                 '{"display_type": "boost_number","trait_type":"Bravo Boost","value":',
                                 bravoBoost,
@@ -250,7 +255,7 @@ library BravoLibrary {
         string memory codeName,
         string memory returnBalance,
         string memory unitName,
-        string memory missionCoinsEarned
+        uint256 missionCoinsEarned
     ) public view returns (string memory) {
         uint256 color1 = randomNum(361, 3, 4);
         string memory comp2Color1 = calcComplimentColor(color1).toString();
@@ -281,7 +286,7 @@ library BravoLibrary {
                                 '{"name":"',
                                 bravoTitle,
                                 tokenId.toString(),
-                                '", "description": "Bravo Company collection - 200 Zero Army founders series NFTs with soulbound fungible $AIM0.',
+                                '", "description": "Bravo Company collection - 200 Zero Army founders series NFTs [semi-fungible] with soulbound burnable $AIM0 - burn and earn Mission Coins in the Zero Army MetaSERVE!',
                                 '", "external_url":"https://zeroarmy.org/bravo", ',
                                 returnAttributes(tokenId ,rank, bravoBoost, missionCoinsEarned),
                                 '"image": "data:image/svg+xml;base64,',

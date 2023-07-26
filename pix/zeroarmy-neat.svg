@@ -1,0 +1,50 @@
+<svg width="777" height="777" xmlns="http://www.w3.org/2000/svg">
+    <circle stroke="hsl(77, 69%, 55%)" stroke-dasharray="5,2,2,2,2,2" stroke-width="48" cx="388.5" cy="488" r="134"
+        fill="#000000" />
+
+    <rect transform="rotate(-45 388.5 42)" stroke-width="22" fill="#000" x="0" y="-346.5" width="777" height="777" />
+
+
+    <circle stroke="hsl(77, 77%, 34%)" stroke-dasharray="5,34,13" stroke-width="24" cx="388.5" cy="488" r="134"
+        fill="#000000" opacity="69%" />
+
+    <text fill="#ffffff" x="50%" y="117" font-size="122" font-family="futura" text-anchor="middle"
+        dominant-baseline="middle">ZERO
+        ARMY</text>
+
+    <text fill="#000000" stroke="hsl(77, 69%, 50%)" x="50%" y="222" stroke-width="2" font-size="69" font-family="futura"
+        text-anchor="middle" dominant-baseline="middle">BRAVO COMPANY</text>
+
+    <text fill="hsl(257, 69%, 69%)" x="50%" y="288" font-size="42" font-family="futura" text-anchor="middle"
+        dominant-baseline="middle">UNBURNED $AIM0 SUPPLY</text>
+
+    <text font-family="futura" font-size="111" text-anchor="middle" dominant-baseline="middle" y="500" x="50%"
+        stroke-width="4" stroke="#ffffff" fill="#000000">0</text>
+
+
+
+
+
+    <circle stroke="hsl(77, 69%, 55%)" stroke-dasharray="2,2" stroke-width="7" cx="100" cy="495" r="69"
+        fill="hsl(257, 69%, 55%)" opacity="69%" />
+    <text text-anchor="start" font-family="futura" font-size="18" y="490" x="74">RANK</text>
+    <text font-weight="bold" text-anchor="middle" font-family="futura" font-size="22" y="517" x="100"
+        fill="hsl(77, 69%, 69%)">0</text>
+
+    <circle stroke="hsl(77, 69%, 55%)" stroke-dasharray="2,2" stroke-width="7" cx="677" cy="495" r="69"
+        fill="hsl(257, 69%, 55%)" opacity="69%" />
+    <text text-anchor="end" font-family="futura" font-size="18" y="490" x="709">BOOST</text>
+    <text font-weight="bold" text-anchor="middle" font-family="futura" font-size="22" y="517" x="678"
+        fill="hsl(77, 69%, 69%)">0</text>
+
+
+
+
+    <rect stroke="#000000" stroke-dasharray="2,2,5,7" stroke-width="17" x="34" y="662" width="711" height="100"
+        opacity="88%" fill="#000000" rx="50" ry="50" />
+    <text stroke-width="2" stroke="#ffffff" fill="#000000" x="50%" y="713" font-size="49" font-family="courier"
+        text-anchor="middle" dominant-baseline="middle">$AIM0:
+        888888 ROUNDS</text>
+
+
+</svg>

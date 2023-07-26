@@ -96,23 +96,55 @@ library BravoLibrary {
         return comp;
     }
 
+    function renderHelper0(
+        Stack2deep memory stack2deep
+    ) internal pure returns (bytes memory) {
+        if(stack2deep.tokenId == 0) {
+        return
+            abi.encodePacked(
+                '<rect stroke="#000000" stroke-dasharray="2,2,',
+                (stack2deep.color1 % 13).toString(),
+                ',7" stroke-width="17" x="34" y="34" width="711" height="280" opacity="88%" fill="#000000" rx="50" ry="50" />',
+                '<text fill="#ffffff" x="50%" y="125" font-size="111" font-family="futura" text-anchor="middle" dominant-baseline="middle">ZERO ARMY</text>',
+                '<text fill="hsl(',
+                stack2deep.comp2Color1,
+                ', 69%, 55%)" stroke="hsl(',
+                stack2deep.color1.toString(),
+                ', 69%, 50%)" x="50%" y="209" stroke-width="3" font-size="69" font-family="futura" text-anchor="middle" dominant-baseline="middle">BRAVO COMPANY</text>',
+                '<text stroke-width="2" stroke="#ffffff" fill="#000000" x="50%" y="265" font-size="49" font-family="courier" text-anchor="middle" dominant-baseline="middle">',
+                stack2deep.codeName,
+                "</text>"
+            );
+        } else {
+        return
+            abi.encodePacked(
+                '<rect transform="rotate(-45 388.5 42)" stroke-width="22" fill="#000" x="0" y="-346.5" width="777" height="777" />',
+                '<text fill="#ffffff" x="50%" y="117" font-size="122" font-family="futura" text-anchor="middle" dominant-baseline="middle">ZERO ARMY</text>',
+                '<text fill="#000000" stroke="hsl(',
+                stack2deep.comp2Color1,
+                ', 69%, 50%)" x="50%" y="222" stroke-width="4" font-size="69" font-family="futura" text-anchor="middle" dominant-baseline="middle">BRAVO COMPANY</text>'
+                '<text fill="hsl(',
+                stack2deep.color1.toString(),
+                ', 69%, 69%)" x="50%" y="288" font-size="42" font-family="futura" text-anchor="middle" dominant-baseline="middle">',
+                stack2deep.codeName,
+                "</text>"
+            );
+        }
+    }
+
     function renderHelper1(
         uint256 color1,
         string memory comp2Color1
     ) internal view returns (bytes memory) {
         return
             abi.encodePacked(
-                '<rect transform="rotate(-45 388.5 42)" stroke-width="22" fill="#000" x="0" y="-346.5" width="777" height="777" />',
                 '<circle stroke="hsl(',
                 comp2Color1,
                 ', 77%, 34%)" stroke-dasharray="5,',
                 (color1 % 34).toString(),
                 ",",
                 randomNum(69, 2, 7).toString(),
-                '" stroke-width="24" cx="388.5" cy="488" r="134" fill="#000000" opacity="69%" />',
-                '<text fill="#000000" stroke="hsl(',
-                comp2Color1,
-                ', 69%, 50%)" x="50%" y="222" stroke-width="2" font-size="69" font-family="futura" text-anchor="middle" dominant-baseline="middle">BRAVO COMPANY</text>'
+                '" stroke-width="24" cx="388.5" cy="488" r="134" fill="#000000" opacity="69%" />'
             );
     }
 
@@ -175,11 +207,6 @@ library BravoLibrary {
         return
             abi.encodePacked(
                 "</text>",
-                '<text fill="hsl(',
-                stack2deep.color1.toString(),
-                ', 69%, 69%)" x="50%" y="288" font-size="42" font-family="futura" text-anchor="middle" dominant-baseline="middle">',
-                stack2deep.codeName,
-                "</text>",
                 '<rect stroke="#000000" stroke-dasharray="2,2,',
                 (stack2deep.color1 % 21).toString(),
                 ',7" stroke-width="17" x="34" y="662" width="711" height="100" opacity="88%" fill="#000000" rx="50" ry="50" />',
@@ -202,11 +229,11 @@ library BravoLibrary {
                         '<circle stroke="hsl(',
                         stack2deep.comp2Color1,
                         ', 69%, 55%)" stroke-dasharray="5,2,2,2,2,2" stroke-width="48" cx="388.5" cy="488" r="134" fill="#000000" />',
+                        renderHelper0(stack2deep),
                         renderHelper1(
                             stack2deep.color1,
                             stack2deep.comp2Color1
                         ),
-                        '<text fill="#ffffff" x="50%" y="117" font-size="122" font-family="futura" text-anchor="middle" dominant-baseline="middle">ZERO ARMY</text>',
                         renderHelper2(
                             stack2deep.tokenId,
                             stack2deep.color1.toString(),

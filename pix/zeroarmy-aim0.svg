@@ -8,15 +8,22 @@
     <circle stroke="hsl(77, 77%, 34%)" stroke-dasharray="5,34,13" stroke-width="24" cx="388.5" cy="488" r="134"
         fill="#000000" opacity="69%" />
 
-    <!-- <text fill="#ffffff" x="50%" y="117" font-size="122" font-family="futura" text-anchor="middle"
-        dominant-baseline="middle">ZERO
-        ARMY</text> -->
 
-    <text fill="hsl(257, 69%, 55%)" stroke="hsl(77, 69%, 50%)" x="50%" y="134" stroke-width="4" font-size="77" font-family="futura"
+
+
+
+
+
+     <rect stroke="#000000" stroke-dasharray="2,2,5,7" stroke-width="17" x="34" y="34" width="711" height="280"
+        opacity="88%" fill="#000000" rx="50" ry="50" />
+
+    <text fill="#ffffff" x="50%" y="125" font-size="111" font-family="futura" text-anchor="middle"
+        dominant-baseline="middle">ZERO
+        ARMY</text>
+
+    <text fill="hsl(257, 69%, 55%)" stroke="hsl(77, 69%, 50%)" x="50%" y="209" stroke-width="4" font-size="69" font-family="futura"
         text-anchor="middle" dominant-baseline="middle">BRAVO COMPANY</text>
 
-     <rect stroke="#000000" stroke-dasharray="2,2,5,7" stroke-width="17" x="34" y="214" width="711" height="100"
-        opacity="88%" fill="#000000" rx="50" ry="50" />
     <text stroke-width="2" stroke="#ffffff" fill="#000000" x="50%" y="265" font-size="49" font-family="courier"
         text-anchor="middle" dominant-baseline="middle">$AIM0: UNBURNED SUPPLY</text>
    

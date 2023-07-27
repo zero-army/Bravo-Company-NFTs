@@ -59,6 +59,9 @@ module.exports = {
    *
    * $ truffle test --network <network-name>
    */
+  dashboard: {
+    port: 24012,
+  },
 
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
@@ -76,6 +79,8 @@ module.exports = {
     //   timeoutBlocks: 50, // # of blocks before a deployment times out (minimum/default: 50)
     //   skipDryRun: true // Skip dry run before migrations? (default: false for public nets)
     // },
+    // Deploy to Polygon mainnet
+
     ganache: {
      host: "127.0.0.1",     // Localhost (default: none)
      port: 8545,            // Standard Ethereum port (default: none)
@@ -86,7 +91,9 @@ module.exports = {
       port: 7545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
      },
-
+     dashboard: {
+      networkCheckTimeout: 3600000,
+    }
     //
     // An additional network, but with some advanced options…
     // advanced: {
@@ -129,7 +136,7 @@ module.exports = {
       settings: {          // See the solidity docs for advice about optimization and evmVersion
        optimizer: {
          enabled: true,
-         runs: 200
+         runs: 2222
        },
        evmVersion: "constantinople"
       }

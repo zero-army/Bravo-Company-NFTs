@@ -1,9 +1,10 @@
-build
+
 node_modules
 .env
 
-
+*.json
 
 .polygonscan
 .DS_Store
-```
+.truffle
+!build/

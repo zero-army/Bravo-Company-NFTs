@@ -1,3 +1,11 @@
-The ZERO ARMY BRAVO COMPANY collection contains 200 ON-CHAIN dynamic NFTs (AKA: dNFTs) with burnable soulbound $AIM0 tokens. Owners can add their own custom CODE NAME. The colors and patterns change every time a user hits the refresh metadata button on Opensea. The statistics, rank and crypto-currency token supply also change over time as the user engages with the token. 
+The ZERO ARMY BRAVO COMPANY collection contains 200 ON-CHAIN dynamic NFTs (AKA: dNFTs) with burnable soulbound $AIM0 tokens. Owners can change select text. The colors and patterns change every time a user clicks the "Refresh metadata" button on Opensea. The rank, rewards and crypto-currency token supply also change over time as players engage with the token.These 200 NFTs serve as tickets to a unique metaverse experience within the World War Zero Army metaverse - codenamed: the MetaSERVE. 
 
-The NFTs serve as tickets to a unique metaverse experience within the World War Zero Army metaverse - codenamed: the MetaSERVE. Holders of Bravo Company tokens will take up unique positions along the Zero Army's FRONTLINE within the simulation game in MetaSERVE. Zero Army Bravo Company Commandos (AKA: C0s) must win back control of the FRONTLINE using strategic thinking and economic AIMunition  - $AIM0. Using their burnable $AIM0 tokens, Bravo Company C0s must burn the entire 2 Million ROUND supply to complete their mission. When a C0 burns through 100 ROUNDS of $AIM0, their Bravo Company NFT will rank up by 1 degree.
+Holders of Bravo Company tokens will take up unique positions along the Zero Army's FRONTLINE within the MetaSERVE simulation game. Zero Army Bravo Company Commandos (AKA: C0s) must win back control of the FRONTLINE using strategic thinking and economic AIMunition - $AIM0. Firing their burnable $AIM0 tokens, Bravo Company C0s must burn the entire 2 Million ROUND supply to complete their mission. 
+
+REWARDS: 
+1. For every ATTO-ROUND of $AIM0 that is burned an equal supply of ATTO-Z3R0 Mission Coins is earned!
+2. When a C0 burns through 100 ROUNDS of $AIM0, their Bravo Company NFT will rank up by 1 degree.
+
+ENLIST --> DONATE --> EARN TOKENS --> PLAY
+
+ZEROARMY.ORG/BRAVO

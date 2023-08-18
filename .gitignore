@@ -8,3 +8,4 @@ build/
 .polygonscan
 .DS_Store
 .truffle
+.gitignore

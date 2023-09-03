@@ -9,4 +9,4 @@ REWARDS:
 
 ENLIST --> DONATE --> EARN TOKENS --> PLAY
 
-ZEROARMY.ORG/BRAVO
+[Opensea.io Gallery link:](https://opensea.io/collection/bravo-company-zero-army)https://opensea.io/collection/bravo-company-zero-army
